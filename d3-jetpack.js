@@ -231,5 +231,4 @@ function ƒ(str){ return function(d){ return typeof(str) == 'undefined' ? d : d[
         define(['d3'], jetpack);
     }
 
-})
-();
+})();
