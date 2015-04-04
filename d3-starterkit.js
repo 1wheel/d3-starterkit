@@ -41,9 +41,9 @@ d3.conventions = function(c){
 
 d3.attachTooltip = function(sel, fieldFns){
   sel 
-      .on('mouseover', ttDisplay)
-      .on('mousemove', ttMove)
-      .on('mouseout',  ttHide)
+      .on('mouseover.attachTooltip', ttDisplay)
+      .on('mousemove.attachTooltip', ttMove)
+      .on('mouseout.attachTooltip',  ttHide)
 
 
   fieldFns = fieldFns || d3.keys(sel.datum()).map(function(str){
