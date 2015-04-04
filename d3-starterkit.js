@@ -82,7 +82,7 @@ d3.attachTooltip = function(sel, fieldFns){
 
 
 d3.selection.prototype.dataAppend = function(data, name){
-  return this.selectAll('#zzzzzz')
+  return this.selectAll(name)
       .data(data).enter()
     .append(name)
 }
