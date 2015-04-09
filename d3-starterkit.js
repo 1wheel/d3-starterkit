@@ -46,8 +46,13 @@ d3.attachTooltip = function(sel, fieldFns){
       .on('mouseout.attachTooltip',  ttHide)
 
 
-  fieldFns = fieldFns || d3.keys(sel.datum()).map(function(str){
-    return function(d){ return str + ': <b>' + d[str] + '</b>'} })
+  var d = sel.datum()
+  fieldFns = fieldFns || d3.keys(d)
+      .filter(function(str){
+        return (typeof d[str] != 'object') && (d[str] != 'array')
+      })
+      .map(function(str){
+        return function(d){ return str + ': <b>' + d[str] + '</b>'} })
 
   function ttDisplay(d){
     d3.select('.tooltip')
