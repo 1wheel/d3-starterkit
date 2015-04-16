@@ -32,7 +32,7 @@ For formated tooltips, update the html of the tooltip on mouseover:
 circles
     .call(d3.attachTooltip)
     .on('mouseover', function(d){
-      d3.select('.tooltip).html(template(d)) })
+      d3.select('.tooltip').html(template(d)) })
 ```
 
 If your fancy tooltip requires lots of markup, using a [template](http://underscorejs.org/#template) might be eaiser than building a complex html tree with d3. 
