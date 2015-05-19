@@ -1,5 +1,5 @@
 # d3-starterkit
-Snippets and conventions for starting a new d3 project without a fuss. Includes [d3](http://d3js.org/), [lodash](http://underscorejs.org/), [d3-jetpack](https://github.com/gka/d3-jetpack), some handy css and a few convenience functions. 
+Snippets and conventions for starting a new d3 project without a fuss. Includes [d3](http://d3js.org/), [lodash](http://underscorejs.org/), [d3-jetpack](https://github.com/gka/d3-jetpack), some handy css and a few convenience functions. [Short example](http://bl.ocks.org/1wheel/1b6758978dc2d52d3a37) and [longer blog post](http://roadtolarissa.com/data-exploration/). 
 
 #### selection.dataAppend
 
