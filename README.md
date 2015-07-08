@@ -15,7 +15,7 @@ var circles = svg.selectAll('circle')
 Use `dataAppend`:
 
 ```js
-var circles = svg.dataAppend('circle', data)
+var circles = svg.dataAppend(data, 'circle')
 ```
 
 #### d3.attachTooltip
