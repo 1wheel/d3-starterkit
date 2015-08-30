@@ -35,7 +35,7 @@ circles
       d3.select('.tooltip').html(template(d)) })
 ```
 
-If your fancy tooltip requires lots of markup, using a [template](http://underscorejs.org/#template) might be eaiser than building a complex html tree with d3. 
+If your fancy tooltip requires lots of markup, using a [template](http://underscorejs.org/#template) might be easier than building a complex html tree with d3. 
 
 #### d3.conventions
 `d3.conventions()` appends an `svg` element with a `g` element according to the  [margin convention](http://bl.ocks.org/mbostock/3019563) to the page and returns an object with the following properties:
