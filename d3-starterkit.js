@@ -11,7 +11,8 @@ d3.conventions = function(c){
   c.svg = c.svg || c.parentSel.append("svg")
       .attr("width", c.width + c.margin.left + c.margin.right)
       .attr("height", c.height + c.margin.top + c.margin.bottom)
-    .append("g")
+  
+  c.svg.append("g")
       .attr("transform", "translate(" + c.margin.left + "," + c.margin.top + ")")
 
   c.color   = c.color   || d3.scale.category10()
