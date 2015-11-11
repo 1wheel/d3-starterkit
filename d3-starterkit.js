@@ -8,9 +8,11 @@ d3.conventions = function(c){
 
   c.parentSel = c.parentSel || d3.select('body')
 
-  c.svg = c.svg || c.parentSel.append("svg")
+  c.rootSVG = c.rootSVG || c.parentSel.append("svg")
       .attr("width", c.width + c.margin.left + c.margin.right)
       .attr("height", c.height + c.margin.top + c.margin.bottom)
+      
+  c.svg = c.svg || c.rootSVG
     .append("g")
       .attr("transform", "translate(" + c.margin.left + "," + c.margin.top + ")")
 
