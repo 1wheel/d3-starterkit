@@ -47,6 +47,7 @@ d3.attachTooltip = function(sel, fieldFns){
       .on('mousemove.attachTooltip', ttMove)
       .on('mouseout.attachTooltip',  ttHide)
 
+  if (!sel.size()) return;
 
   var d = sel.datum()
   fieldFns = fieldFns || d3.keys(d)
