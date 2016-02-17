@@ -11,7 +11,7 @@ d3.conventions = function(c){
   c.rootSVG = c.rootSVG || c.parentSel.append("svg")
       .attr("width", c.width + c.margin.left + c.margin.right)
       .attr("height", c.height + c.margin.top + c.margin.bottom)
-      
+
   c.svg = c.svg || c.rootSVG
     .append("g")
       .attr("transform", "translate(" + c.margin.left + "," + c.margin.top + ")")
@@ -37,16 +37,17 @@ d3.conventions = function(c){
         .attr("class", "y axis")
         .call(c.yAxis);
   }
-  
+
   return c
 }
 
 d3.attachTooltip = function(sel, fieldFns){
-  sel 
+  sel
       .on('mouseover.attachTooltip', ttDisplay)
       .on('mousemove.attachTooltip', ttMove)
       .on('mouseout.attachTooltip',  ttHide)
 
+  if (sel.empty()) return;
 
   var d = sel.datum()
   fieldFns = fieldFns || d3.keys(d)
@@ -92,4 +93,12 @@ d3.selection.prototype.dataAppend = function(data, name){
   return this.selectAll(name)
       .data(data).enter()
     .append(name)
+}
+
+d3.selection.prototype.selectAppend = function(name){
+  return this.selectAll(name)
+      .data([null])
+      .call(function(sel) {
+        sel.enter().append(name)
+      })
 }
