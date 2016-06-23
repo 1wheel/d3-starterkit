@@ -21,7 +21,7 @@
         .append("g")
           .attr("transform", "translate(" + c.margin.left + "," + c.margin.top + ")")
 
-      c.color   = c.color   || d3.scaleCategory10()
+      c.color   = c.color   || d3.scaleOrdinal().range(d3.schemeCategory10)
       c.x       = c.x       || d3.scaleLinear().range([0, c.width])
       c.y       = c.y       || d3.scaleLinear().range([c.height, 0])
       c.rScale  = c.rScale  || d3.scaleSqrt().range([5, 20])
