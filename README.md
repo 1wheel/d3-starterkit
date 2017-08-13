@@ -3,7 +3,7 @@
 # d3-starterkit
 Snippets and conventions for starting a new d3 project without a fuss. Includes [d3](http://d3js.org/), [lodash](http://underscorejs.org/), [d3-jetpack](https://github.com/gka/d3-jetpack), some handy css and a few convenience functions. [Short example](http://bl.ocks.org/1wheel/3dfee2b74943398f0550) and [longer blog post](http://roadtolarissa.com/data-exploration/).
 
-This branch uses d3 verison 4, see the [d3v3 branch](https://github.com/1wheel/d3-starterkit/tree/d3v3) to use with d3 verision 3. 
+This branch uses d3 verison 4, see the [d3v3 branch](https://github.com/1wheel/d3-starterkit/tree/d3v3) to use with d3 version 3. 
 
 #### selection.dataAppend
 
@@ -43,7 +43,7 @@ var g = el.selectAppend('g')
 
 #### d3.attachTooltip
 
-Attaches a light weight tooltip that prints out all of an objects properties on mouseover. No more `> d3.select($0).datum()`! Assumes that a `<div class='tooltip'></div>` and the tooltip css exist on the page - see [index](https://github.com/1wheel/d3-starterkit/blob/master/index.html) for an example.
+Attaches a light weight tooltip that prints out all of an objects properties on mouseover. No more `> d3.select($0).datum()`! Assumes that a `<div class='tooltip'></div>` and the tooltip css exist on the page – see [index](https://github.com/1wheel/d3-starterkit/blob/master/index.html) for an example.
 
 ```js
 circles.call(d3.attachTooltip)
